@@ -1,7 +1,7 @@
 {
-  "name": "bugbot",
+  "name": "doorBot",
   "version": "0.0.1",
-  "description": "bugbot addds a slack integration for a webform, so bugs can be reported to the slack directly",
+  "description": "doorBot adds a slack integration for opening the office door",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
