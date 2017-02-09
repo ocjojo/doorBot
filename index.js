@@ -24,9 +24,10 @@
 			log: doorbot.getLog(),
 			helpers: {
 				formatDate: function(date){
-					if(typeof date.getDate == 'function') date = JSON.stringify(date);
+					if(typeof date.replace != 'function') date = JSON.stringify(date);
 					return date
 					.replace(/T/, ' ')
+					.replace(/"/, '')
   					.replace(/\..+/, '');
 				}
 			}
