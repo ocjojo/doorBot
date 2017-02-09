@@ -1,0 +1,19 @@
+{
+  "name": "bugbot",
+  "version": "0.0.1",
+  "description": "bugbot addds a slack integration for a webform, so bugs can be reported to the slack directly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lukas Ehnle (lukas.ehnle@aiesec.de)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "lowdb": "^0.14.0",
+    "slackbots": "^1.0.2",
+    "yapl": "ocjojo/yapl"
+  }
+}

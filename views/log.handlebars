@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DoorBot Log</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>DoorBot Logs</h1>
+		</div>
+	</div>
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Message</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each log}}
+				<tr>
+					<td>{{id}}</td>
+					<td>{{message}}</td>
+					<td>{{formatDate timestamp}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+</html>
