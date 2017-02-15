@@ -10,6 +10,14 @@
 
 	var doorbot;
 
+	var formatDate = function(date){
+		if(typeof date.replace != 'function') date = JSON.stringify(date);
+		return date
+		.replace(/T/, ' ')
+		.replace(/"/, '')
+			.replace(/\..+/, '');
+	};
+
 	app.engine('handlebars', exphbs());
 	app.set('view engine', 'handlebars');
 
@@ -23,13 +31,17 @@
 		res.render('log', {
 			log: doorbot.getLog().reverse(),
 			helpers: {
-				formatDate: function(date){
-					if(typeof date.replace != 'function') date = JSON.stringify(date);
-					return date
-					.replace(/T/, ' ')
-					.replace(/"/, '')
-  					.replace(/\..+/, '');
-				}
+				formatDate: formatDate
+			}
+		});
+	});
+
+	app.get('/error', function (req, res) {
+
+		res.render('log', {
+			log: doorbot.getErrorLog(),
+			helpers: {
+				formatDate: formatDate
 			}
 		});
 	});
