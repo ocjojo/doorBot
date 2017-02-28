@@ -1,0 +1,9 @@
+{
+	"sourceDir": "/opt/doorBot",
+	"l": "forever.log",
+	"o": "info.log",
+	"e": "error.log",
+    "append": true,
+    "watch": true,
+    "script": "index.js"
+}

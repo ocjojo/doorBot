@@ -10,9 +10,10 @@
 ### END INIT INFO
 case "$1" in
 start)
-cd /opt/doorBot && exec /usr/local/bin/node /opt/doorBot/index.js > /dev/null &;;
+forever start /opt/doorBot/forever.json
+;;
 stop)
-#Hier kannst du den Server beenden
+forever stop /opt/doorBot/forever.json
 ;;
 *)
 echo "Usage: $0 {start|stop|restart}"
