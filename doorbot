@@ -13,7 +13,7 @@ start)
 forever start /opt/doorBot/forever.json
 ;;
 stop)
-forever stop /opt/doorBot/forever.json
+forever stop /opt/doorBot/index.js
 ;;
 *)
 echo "Usage: $0 {start|stop|restart}"
