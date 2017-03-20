@@ -1,6 +1,6 @@
 {
 	"sourceDir": "/opt/doorBot",
-	"logFile": "forever.log",      
+	"logFile": "doorbot.log",      
    	"outFile": "out.log",
    	"errFile": "err.log",
     "append": true,
